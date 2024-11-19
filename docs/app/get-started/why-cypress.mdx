@@ -1,0 +1,294 @@
+---
+title: 'Cypress 测试方案 | Cypress 文档'
+description: '探索 Cypress 文档，获取关于端到端、组件和可访问性测试的全面指南。发现功能、命令、最佳实践，并立即开始使用 Cypress'
+sidebar_label: 为什么选择 Cypress?
+sidebar_position: 10
+---
+
+# 为什么选择 Cypress?
+
+:::info
+
+##### <Icon name="question-circle" color="#0097A8" /> 为什么你要学习 Cypress?
+
+- Cypress 提供的测试解决方案
+- Cypress App、Cypress Cloud、UI Coverage 和 Cypress Accessibility 的特性
+- 我们的使命和我们相信的事
+- Cypress 和其他测试工具之间的主要区别
+
+:::
+
+## 简而言之
+
+Cypress 是专为现代网络打造的新一代前端测试工具。我们解决了团队在测试现代应用程序和维护测试套件时面临的关键痛点。
+
+我们的用户通常是希望构建 Web 应用程序并提高现有应用程序质量的开发人员、QA 工程师和团队。
+
+Cypress 提供以下解决方案：
+
+- [端到端测试](#End-to-end-Testing)
+- [组件测试](#Component-Testing)
+- [可访问性测试](#Accessibility-Testing)
+- [UI 覆盖](#UI-Coverage-1)
+- [以及更多...](#Other)
+
+Cypress 可以测试任何在浏览器中运行的内容，并提供如何改善测试套件健康状况和应用程序质量的方案。
+
+## 产品
+
+- [Cypress App](/app/core-concepts/open-mode) 是一款免费的、[开源的](https://github.com/cypress-io/cypress)、本地安装的应用程序，用于编写和运行测试。
+- [Cypress Cloud](/cloud/get-started/introduction) 是一项用于记录测试、显示测试结果和提供测试分析的付费服务。
+- [UI 覆盖](/ui-coverage/get-started/introduction) 是一款付费插件，它提供了应用程序每个页面和组件的测试覆盖率的可视化概览，为每个人都能理解的未覆盖区域提供清晰的见解。
+- [Cypress 可访问性](/accessibility/get-started/introduction) 是一款提供可访问性检查的付费附加组件，可帮助检测残障人士使用您的应用程序时遇到的障碍。
+
+Cypress 是一个强大的测试工具，可以提高您应用程序的质量。
+
+## 特性
+
+下面列出的是每个产品的一些主要特性。
+
+### Cypress 应用
+
+- **时间旅行:** Cypress 在测试运行时拍摄快照。将鼠标悬停在 [命令日志](/app/core-concepts/open-mode#Command-Log) 中的命令上，即可准确查看每一步发生的情况。
+- **可调试性:** 无需猜测测试失败的原因。直接从开发者工具进行 [调试](/app/guides/debugging)。我们可读的错误和堆栈跟踪使调试变得非常快捷。
+- **自动等待:** 永远不要在测试中添加等待或休眠。Cypress 会在继续之前 [自动等待](/app/core-concepts/introduction-to-cypress#Cypress-is-Not-Like-jQuery) 命令和断言。再也没有异步地狱。
+- **控制、留存和计时器:** 验证和 [控制](/app/guides/stubs-spies-and-clocks) 函数、服务器响应或计时器的行为。您喜爱的单元测试功能就在您指尖。
+- **网络流量控制:** 轻松 [控制、存储和边缘测试情况](/app/guides/network-requests)，无需涉及您的服务器。您可以根据需要留存网络流量。
+- **一致的结果:** 我们的架构不使用 Selenium 或 WebDriver。告别不稳定的测试，迎接快速、一致和可靠的测试。
+- **跨浏览器测试:** 在本地和 [在持续集成管道中](/app/guides/cross-browser-testing)，在 Firefox 和 Chrome 系列浏览器（包括 Edge 和 Electron）中运行测试。
+
+### Cypress 云
+
+- **测试重放:** 记录到 [Cypress Cloud](/cloud/get-started/introduction) 中准确重放运行期间执行的测试，使用 [测试重放](/cloud/features/test-replay) 功能进行零配置调试。
+- **智能编排:** 一旦您设置好记录到 Cypress Cloud，轻松 [并行化](/cloud/features/smart-orchestration/parallelization) 您的测试套件，使用 [规范优先级](/cloud/features/smart-orchestration/spec-prioritization) 功能重新运行失败的规范，并使用 [自动取消](/cloud/features/smart-orchestration/run-cancellation) 功能在失败时取消测试运行以获得紧凑的反馈循环。
+- **波动检测:** 使用 Cypress Cloud 的 [波动性测试管理](/cloud/features/flaky-test-management) 功能发现并诊断不可靠的测试。
+- **分支审查:** 使用 [分支审查](/cloud/features/branch-review) 功能快速识别在单一视图中拉取请求可能对您的测试套件的影响。比较源分支和基础分支之间哪些测试失败、不稳定、待处理、已添加或已修改，并防止合并低质量代码。
+- **集成:** 与 [GitHub](/cloud/integrations/source-control/github)、[GitLab](/cloud/integrations/source-control/gitlab) 或 [Bitbucket](/cloud/integrations/source-control/bitbucket) 集成，以便在每次推送或拉取请求时直接查看测试结果。Cypress Cloud 还与 [Slack](/cloud/integrations/slack)、[Jira](/cloud/integrations/jira) 和 [Microsoft Teams](/cloud/integrations/teams) 集成，以保持您的团队同步。
+- **测试分析:** 使用 [测试分析](/cloud/features/analytics/overview) 功能跟踪测试结果随时间的变化，以识别测试套件中的趋势、回归和改进。使用我们的 [数据提取 API](/cloud/integrations/data-extract-api) 功能提取对您的团队重要的数据。
+
+### UI 覆盖
+
+- **可视化覆盖:** [UI 覆盖](/ui-coverage/get-started/introduction) 功能提供应用程序每个页面和组件的测试覆盖的可视化概览，提供每个人都能理解的未覆盖区域的清晰见解。
+- **结果 API:** 使用 UI 覆盖的 [结果 API](/ui-coverage/results-api) 以编程方式访问测试覆盖数据并将其集成到您现有的工作流程中。
+
+### Cypress 可访问性
+
+- **可访问性检查:** 通过立即添加数千个 [可访问性检查](/accessibility/get-started/introduction) （无需设置、更改代码或降低性能），最大限度地提高现有 Cypress 测试的价值。
+- **运行级报告:** 使用 [运行级报告](/accessibility/core-concepts/run-level-reports) 获取测试运行中发现的可访问性问题的详细报告。
+- **结果 API:** 使用 Cypress 可访问性的 [结果 API](/accessibility/results-api) 在 CI 环境中以编程方式访问可访问性结果。
+
+## 解决方案
+
+Cypress 可用于确保多种不同类型的测试。这可以使您更加确信被测应用程序按预期运行并且可供所有用户访问。
+
+### 端到端测试
+
+Cypress 最初设计用于在浏览器中运行 [端到端（E2E）测试](/app/end-to-end-testing/writing-your-first-end-to-end-test)。典型的 E2E 测试会通过浏览器访问应用程序，并像真实用户一样通过 UI 执行操作。
+
+```js
+it('adds todos', () => {
+  cy.visit('https://example.cypress.io/')
+  cy.get('[data-cy="new-todo"]').type('write tests{enter}')
+  // 确认一个操作后，是否得到数据
+  cy.get('[data-cy="todos"]').should('have.length', 1)
+})
+```
+
+### 组件测试
+
+Cypress [组件测试](/app/component-testing/get-started) 提供一个组件工作台，您可以快速构建和测试来自多个前端 UI 库的组件，无论其简单还是复杂。
+
+了解有关如何测试
+[React](/app/component-testing/react/overview)、
+[Angular](/app/component-testing/angular/overview)、
+[Vue](/app/component-testing/vue/overview) 和
+[Svelte](/app/component-testing/svelte/overview) 组件的更多信息。
+
+<Tabs>
+<TabItem value="React">
+
+```ts
+import Button from './Button'
+
+it('uses custom text for the button label', () => {
+  cy.mount(<Button>Click me!</Button>)
+  // 按钮组件文本显示是否正确的断言
+  cy.get('button').should('contains.text', 'Click me!')
+})
+```
+
+</TabItem>
+<TabItem value="Angular">
+
+```ts
+import ButtonComponent from './button.component'
+
+it('uses custom text for the button label', () => {
+  cy.mount('<app-button>Click me!</app-button>', {
+    declarations: [ButtonComponent],
+  })
+  // 按钮组件文本显示是否正确的断言
+  cy.get('button').should('contains.text', 'Click me!')
+})
+```
+
+</TabItem>
+<TabItem value="Vue">
+
+```ts
+import Button from './Button.vue'
+
+it('uses custom text for the button label', () => {
+  cy.mount(Button, {
+    slots: {
+      default: 'Click me!',
+    },
+  })
+  // 按钮组件文本显示是否正确的断言
+  cy.get('button').should('contains.text', 'Click me!')
+})
+```
+
+</TabItem>
+<TabItem value="Svelte">
+
+```ts
+import Button from './Button.svelte'
+
+it('uses custom text for the button label', () => {
+  cy.mount(Button, { props: { msg: 'Click me!' } })
+  // 按钮组件文本显示是否正确的断言
+  cy.get('button').should('contains.text', 'Click me!')
+})
+```
+
+</TabItem>
+</Tabs>
+
+### 可访问性测试
+
+您可以编写 Cypress 测试来检查应用程序的可访问性，并使用插件运行广泛的可访问性扫描。
+结合 Cypress Cloud 中的 [Cypress 可访问性](/accessibility/get-started/introduction)，可以在您的测试未满足特定可访问性标准时提供见解 - 无需配置。有关详细信息，请参阅我们的 [可访问性测试指南](/app/guides/accessibility-testing)。
+
+```js
+it('adds todos', () => {
+  cy.visit('https://example.cypress.io/')
+  cy.get('img#logo')
+    // img 标签的 alt 文本是否正确的断言
+    .should('have.attr', 'alt', 'Cypress Logo')
+})
+```
+
+<DocsImage
+  src="/img/accessibility/get-started/cypress-accessibility-overview.png"
+  alt="显示 Cypress 可访问性仪表板的图形，包括规则、视图和用户界面，显示如何使用开发者工具"
+/>
+
+### UI 覆盖
+
+您可以通过使用 [UI 覆盖](/ui-coverage/get-started/introduction) 填补关键应用程序流程中的测试空白，从而提高发布质量。利用数据驱动的见解来覆盖未测试的区域，减少事故并提高应用程序质量。
+
+<DocsImage
+  src="/img/ui-coverage/get-started/uicov-docs-1.gif"
+  alt="显示云产品 UI 的 UI 覆盖演示"
+/>
+
+### 其他
+
+Cypress 可以执行任意 HTTP 调用，因此您可以将其用于 API 测试。
+
+```js
+it('adds a todo', () => {
+  cy.request('POST', '/todos', { title: 'Write API Tests' })
+    .its('body')
+    .should('contain', { title: 'Write API Tests' })
+})
+```
+
+通过大量的 [官方和第三方插件](/app/plugins/plugins-list)，您可以编写许多其他类型的测试！
+
+## 我们的使命
+
+我们的使命是构建一个蓬勃发展的测试解决方案，以提高生产力，使测试成为一种愉快的体验，并让开发人员感到快乐。我们有责任倡导**真正有效的**测试流程。
+
+我们认为我们的文档应该通俗易懂。这意味着让我们的读者不仅能够充分理解是**什么**，还要理解**为什么**。
+
+我们希望帮助开发人员更快、更好地构建新一代现代应用程序，而无需承受管理测试带来的压力和焦虑。我们的目标是利用测试结果生成切实可行的见解，通过主动识别需要改进的领域来实现长期稳定性，从而提升软件开发的艺术。
+
+我们知道，要想取得成功，就必须启用、培育和培育一个依靠开源蓬勃发展的生态系统。每一行测试代码都是对**您的代码库**的投资，它永远不会作为付费服务与我们挂钩。测试将始终能够独立运行和工作。
+
+我们相信测试需要很多❤️，我们在这里构建一个工具、一项服务和一个社区，人人都可以学习和受益。我们正在解决每个从事 Web 开发的开发人员共享的最难的痛点。我们相信这一使命，并希望您能加入我们，使 Cypress 成为一个持久的生态系统，让每个人都快乐。
+
+## 主要区别
+
+### 架构
+
+大多数测试工具（如 Selenium）通过在浏览器外运行并在网络上执行远程命令来操作。Cypress 完全相反。Cypress 在与您的应用程序相同的运行循环中执行。
+
+Cypress 背后是一个节点服务器进程。Cypress 和节点进程不断通信、同步，并代表彼此执行任务。访问这两个部分（前端和后端）使我们能够实时响应您的应用程序事件，同时在需要更高权限的任务时在浏览器外工作。
+
+Cypress 最终从上到下控制整个自动化过程，这使其能够理解浏览器内外发生的一切。这意味着 Cypress 能够提供比任何其他测试工具更一致的结果。
+
+由于 Cypress 是 [本地安装的](/app/get-started/install-cypress) 在您的机器上，它还可以访问操作系统以进行自动化任务。这使得执行任务（如 [截屏、录制视频](/app/guides/screenshots-and-videos)、一般 [文件系统操作](/api/commands/exec) 和 [网络操作](/api/commands/request) 成为可能。
+
+### 原生访问
+
+由于 Cypress 在您的应用程序中操作，这意味着它可以本地访问每个对象。无论是 `window`、`document`、DOM 元素、您的应用程序实例、函数、计时器、服务工作者还是其他任何东西 - 您都可以在 Cypress 测试中访问它。
+
+例如，您可以：
+
+- [留存](/api/commands/stub) 浏览器或您的应用程序的函数，并在测试用例中强制它们按需行为。
+- 暴露数据存储，以便您可以从测试代码中以编程方式更改应用程序的状态。
+- 通过强制服务器发送空响应来测试边缘情况，如“空视图”。
+- 通过修改响应状态代码为 500 来测试您的应用程序如何响应服务器上的错误。
+- 直接修改 DOM 元素 - 如强制显示隐藏元素。
+- 以编程方式使用第三方插件。无需摆弄复杂的 UI 小部件，如多选、自动完成、下拉菜单、树视图或日历，您可以直接从测试代码中调用方法来控制它们。
+- 在测试时 [阻止 Google Analytics 在任何应用程序代码执行之前加载](/app/references/configuration#blockHosts)。
+- 每当您的应用程序过渡到新页面或开始卸载时，获取同步通知。
+- [通过向前或向后移动时间来控制时间](/api/commands/clock)，以便计时器或轮询自动触发，而无需在测试中等待所需时间。
+- 添加您自己的事件监听器以响应您的应用程序。您可以更新应用程序代码以在 Cypress 测试中以不同方式行为。您可以从 Cypress 内部控制 WebSocket 消息、有条件地加载第三方脚本，或直接在应用程序上调用函数。
+- 对于[组件测试](/app/component-testing/get-started)，Cypress 是基于浏览器的，允许您不仅测试组件的功能，还测试样式和外观。您可以直观地查看组件的运行情况，并在应用中与其交互。
+
+### 快捷方式
+
+Cypress 允许使用 [`cy.session()`](/api/commands/session) 缓存浏览器上下文。这意味着作为用户，您只需在整个测试套件中执行一次身份验证，并在每次测试之间恢复保存的会话。这意味着您不必在每次运行测试时访问登录页面、输入用户名和密码并等待页面加载和/或重定向。您可以通过 [`cy.session()`](/api/commands/session) 一次性完成此操作，如果需要，还可以通过 [`cy.origin()`](/api/commands/origin)。
+
+### 抗波动
+
+Cypress 同步了解和理解应用程序中发生的一切。页面加载和卸载时会立即通知 Cypress。Cypress 甚至知道元素的动画速度，并将 [等待其停止动画](/app/core-concepts/interacting-with-elements#Animations)。此外，它会 [自动等待元素变得可见](/app/core-concepts/interacting-with-elements#Visibility)、[变得可用](/app/core-concepts/interacting-with-elements#Disability) 和 [停止被覆盖](/app/core-concepts/interacting-with-elements#Covering)。当页面开始过渡时，Cypress 将暂停命令执行，直到以下页面完全加载。您还可以告诉 Cypress [等待](/api/commands/wait) 特定网络请求完成。
+
+### 可调试性
+
+最重要的是，Cypress 是为可用性而构建的。
+
+- 有数百个自定义错误消息，描述 Cypress 失败测试的确切原因。
+- 丰富的 UI 直观地显示命令执行、断言、网络请求、间谍、存根、页面加载或 URL 更改。
+- Cypress App 拍摄应用程序的快照，并使您能够时光旅行回到命令运行时的状态。
+- 您可以在测试运行时使用开发者工具查看每个控制台消息或网络请求。您可以检查元素并在规范或应用程序代码中使用调试器语句 - 您可以使用所有您已经熟悉的工具。这使您能够同时进行测试和开发。
+
+### 权衡
+
+虽然 Cypress 有许多新的强大功能 - 但我们在实现这一点时也做出了重要的权衡。
+
+如果您有兴趣了解更多，我们已经撰写了 [整个指南](/app/references/trade-offs) 来讨论这个主题。
+
+## 开始使用
+
+[安装 Cypress](/app/get-started/install-cypress)，以便您可以在几分钟内快速看到第一个通过的测试，无论是 [端到端测试](/app/end-to-end-testing/writing-your-first-end-to-end-test) 还是 [组件测试](/app/component-testing/get-started)。
+
+## Cypress 在现实世界中的应用
+
+<DocsImage
+  src="/img/app/get-started/real-world-app.png"
+  alt="Cypress 现实世界应用程序"
+/>
+
+Cypress 使测试快速而简单，并且当您开始测试应用程序时，**您经常会想知道您是否在使用最佳实践或可扩展策略**。
+
+{/* prettier-ignore */}
+为了指引方向，Cypress 团队创建了<Icon name="github" inline="true" contentType="rwa" />，
+一个完整的堆栈示例应用程序，展示了使用 **Cypress 在实际和现实场景中进行测试**。
+
+RWA 实现了完整的 [代码覆盖率](/app/tooling/code-coverage)，通过端到端测试 [跨多个浏览器](/app/guides/cross-browser-testing) 和 [设备尺寸](/api/commands/viewport)，还包括 [视觉回归测试](/app/tooling/visual-testing)、API 测试、单元测试，并在 [高效的 CI 管道](https://cloud.cypress.io/projects/7s5okt) 中运行。使用 RWA 来**学习、实验、探索和实践**使用 Cypress 进行 Web 应用程序测试。
+
+该应用程序捆绑了您所需的一切，只需 [克隆存储库](https://github.com/cypress-io/cypress-realworld-app) 并开始测试。
