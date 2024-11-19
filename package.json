@@ -1,6 +1,7 @@
 {
-  "name": "cypress-docusaurus-ts",
-  "version": "0.0.0",
+  "name": "cypress-docusaurus-zh",
+  "version": "0.0.1",
+  "authors": ["SmallTeddy"],
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -10,6 +11,7 @@
     "prebuild": "rm -rf dist && npm run build:plugins",
     "build": "docusaurus build --out-dir dist",
     "build:plugins": "npm --prefix ./plugins/cypressRemarkPlugins run build",
+    "gh-pages": "gh-pages -d dist",
     "lint": "npm run lint:markdown",
     "lint:fix": "npm run lint:markdown:fix",
     "lint:markdown": "prettier --check '**/*.{md,mdx}'",
@@ -40,6 +42,7 @@
     "clsx": "^2.1.0",
     "docusaurus-plugin-image-zoom": "^2.0.0",
     "docusaurus-plugin-sass": "0.2.5",
+    "gh-pages": "^6.2.0",
     "postcss": "^8.4.34",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.2.0",
